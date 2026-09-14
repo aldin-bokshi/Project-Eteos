@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Project-Eteos"
-config/features=PackedStringArray("4.7", "GL Compatibility")
+config/name="ProjectEteos"
+config/features=PackedStringArray("4.7", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
@@ -21,7 +21,7 @@ window/stretch/aspect="expand"
 
 [dotnet]
 
-project/assembly_name="Project-Eteos"
+project/assembly_name="ProjectEteos"
 
 [physics]
 

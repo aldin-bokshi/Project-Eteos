@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project-Eteos", "Project-Eteos.csproj", "{62697D22-D6BF-49C1-AF3C-09CCE90911B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEteos", "ProjectEteos.csproj", "{62697D22-D6BF-49C1-AF3C-09CCE90911B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
