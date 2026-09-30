@@ -89,7 +89,7 @@ public class GravityTest
             Mass = mass,
             Position = new Vector3(0, 10, 0),
             Velocity = Vector3.Zero,
-            Force = Vector3.Zero
+            AccumulatedForce = Vector3.Zero
         };
     }
 
