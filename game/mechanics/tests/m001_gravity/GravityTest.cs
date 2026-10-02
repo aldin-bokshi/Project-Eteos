@@ -1,8 +1,8 @@
 using Godot;
-using ProjectEteos.Scripts.Objects;
-using ProjectEteos.Scripts.Physics;
+using ProjectEteos.Game.Mechanics.Simulation;
+using Vector3 = System.Numerics.Vector3;
 
-namespace ProjectEteos.Tests.M001_GravityTest;
+namespace ProjectEteos.game.mechanics.tests.m001_gravity;
 
 public class GravityTest
 {

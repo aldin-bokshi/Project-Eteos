@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://8ggvvess58ra"]
 
-[ext_resource type="Script" uid="uid://l7tgxtuls5tc" path="res://Scripts/Simulation/SimulationWorld.cs" id="1_se44i"]
+[ext_resource type="Script" uid="uid://l7tgxtuls5tc" path="res://game/world/SimulationWorldView.cs" id="1_se44i"]
 
 [node name="SimulationWorld" type="Node" unique_id=630946865]
 script = ExtResource("1_se44i")

@@ -1,11 +1,10 @@
-using Godot;
-using ProjectEteos.Scripts.Objects;
+using System.Numerics;
 
-namespace ProjectEteos.Scripts.Physics;
+namespace ProjectEteos.Game.Mechanics.Simulation;
 
-public partial class PhysicsSystem : Node
+public class PhysicsSystem
 {
-    public Vector3 Gravity { get; set; } = new(0, -9.81f, 0);
+    public Vector3 Gravity { get; set; } = new(0f, -9.81f, 0f);
 
     public void ApplyForce(SimulationObject body, Vector3 force)
     {
@@ -19,19 +18,12 @@ public partial class PhysicsSystem : Node
 
     public void Step(SimulationObject body, float delta)
     {
-        TestInvaledMass();
-
         Vector3 gravityForce = Gravity * body.Mass;
-
         ApplyForce(body, gravityForce);
 
         Vector3 acceleration = body.AccumulatedForce / body.Mass;
-
         body.Velocity += acceleration * delta;
         body.Position += body.Velocity * delta;
-
         body.AccumulatedForce = Vector3.Zero;
     }
-
-
 }

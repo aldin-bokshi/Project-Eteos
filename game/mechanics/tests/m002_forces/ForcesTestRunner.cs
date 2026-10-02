@@ -1,6 +1,7 @@
 using Godot;
 
-namespace ProjectEteos.Tests.M002_ForceTest;
+// namespace ProjectEteos.Game.Mechanics.Tests.M002_ForceTest;
+namespace ProjectEteos.game.mechanics.tests.m002_forces;
 
 public partial class ForcesTestRunner : Node
 {

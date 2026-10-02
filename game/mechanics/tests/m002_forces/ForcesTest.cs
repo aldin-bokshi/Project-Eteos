@@ -1,8 +1,9 @@
 using Godot;
-using ProjectEteos.Scripts.Objects;
-using ProjectEteos.Scripts.Physics;
+using ProjectEteos.Game.Mechanics.Simulation;
+using Vector3 = System.Numerics.Vector3;
 
-namespace ProjectEteos.Tests.M002_ForceTest;
+// namespace ProjectEteos.Game.Mechanics.Tests.M002_ForceTest;
+namespace ProjectEteos.game.mechanics.tests.m002_forces;
 
 public class ForceTest
 {
@@ -26,16 +27,17 @@ public class ForceTest
     private void TestSingleForce()
     {
         var body = CreateBody(2.0f);
-        var physics = new PhysicsSystem();
-
-        physics.Gravity = Vector3.Zero;
+        var physics = new PhysicsSystem
+        {
+            Gravity = Vector3.Zero
+        };
 
         physics.ApplyForce(body, new Vector3(10, 0, 0));
 
         physics.Step(body, 1.0f);
 
-            // What should the velocity be after 10 N acts
-            // on a 2 kg object for 1 second?
+        // What should the velocity be after 10 N acts
+        // on a 2 kg object for 1 second?
         float expected = 5.0f; // 10 N·s / 2 kg = 5 m/s
         float actual = body.Velocity.X;
 
@@ -45,9 +47,10 @@ public class ForceTest
     private void TestMultipleForces()
     {
         var body = CreateBody(2.0f);
-        var physics = new PhysicsSystem();
-
-        physics.Gravity = Vector3.Zero;
+        var physics = new PhysicsSystem
+        {
+            Gravity = Vector3.Zero
+        };
 
         physics.ApplyForce(body, new Vector3(10, 0, 0));
         physics.ApplyForce(body, new Vector3(6, 0, 0));
@@ -63,9 +66,10 @@ public class ForceTest
     private void TestOpposingForces()
     {
         var body = CreateBody(2.0f);
-        var physics = new PhysicsSystem();
-
-        physics.Gravity = Vector3.Zero;
+        var physics = new PhysicsSystem
+        {
+            Gravity = Vector3.Zero
+        };
 
         physics.ApplyForce(body, new Vector3(10, 0, 0));
         physics.ApplyForce(body, new Vector3(-10, 0, 0));
@@ -81,9 +85,10 @@ public class ForceTest
     private void TestForceAccumulatorResets()
     {
         var body = CreateBody(2.0f);
-        var physics = new PhysicsSystem();
-
-        physics.Gravity = Vector3.Zero;
+        var physics = new PhysicsSystem
+        {
+            Gravity = Vector3.Zero
+        };
 
         physics.ApplyForce(body, new Vector3(10, 0, 0));
 
@@ -109,9 +114,10 @@ public class ForceTest
         var lightBody = CreateBody(2.0f);
         var heavyBody = CreateBody(10.0f);
 
-        var physics = new PhysicsSystem();
-
-        physics.Gravity = Vector3.Zero;
+        var physics = new PhysicsSystem
+        {
+            Gravity = Vector3.Zero
+        };
 
         physics.ApplyForce(lightBody, new Vector3(10, 0, 0));
         physics.ApplyForce(heavyBody, new Vector3(10, 0, 0));
@@ -139,9 +145,10 @@ public class ForceTest
     private void TestSingleImpulse()
     {
         var body = CreateBody(2.0f);
-        var physics = new PhysicsSystem();
-
-        physics.Gravity = Vector3.Zero;
+        var physics = new PhysicsSystem
+        {
+            Gravity = Vector3.Zero
+        };
 
         physics.ApplyImpulse(body, new Vector3(10, 0, 0));
 
@@ -157,9 +164,10 @@ public class ForceTest
         var forceBody = CreateBody(2.0f);
         var impulseBody = CreateBody(2.0f);
 
-        var physics = new PhysicsSystem();
-
-        physics.Gravity = Vector3.Zero;
+        var physics = new PhysicsSystem
+        {
+            Gravity = Vector3.Zero
+        };
 
         physics.ApplyForce(forceBody, new Vector3(10, 0, 0));
         physics.ApplyImpulse(impulseBody, new Vector3(10, 0, 0));

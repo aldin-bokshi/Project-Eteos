@@ -1,6 +1,6 @@
 using Godot;
 
-namespace ProjectEteos.Tests.M001_GravityTest;
+namespace ProjectEteos.game.mechanics.tests.m001_gravity;
 
 public partial class GravityTestRunner : Node
 {
